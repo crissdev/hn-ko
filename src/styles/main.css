@@ -57,3 +57,20 @@ body {
   margin-right: -10px;
   padding-left: 34px;
 }
+[class^="cko-hn-item-"] > .cko-headline a,
+[class^="cko-hn-item-"] > .cko-headline a:hover,
+[class^="cko-hn-item-"] > .cko-headline a:focus,
+[class^="cko-hn-item-"] > .cko-headline a:active {
+  text-decoration: none;
+  color: inherit;
+}
+[class^="cko-hn-item-"] > .cko-item-details a,
+[class^="cko-hn-item-"] > .cko-item-details a:hover,
+[class^="cko-hn-item-"] > .cko-item-details a:focus,
+[class^="cko-hn-item-"] > .cko-item-details a:active {
+  color: inherit;
+}
+.cko-item-details {
+  padding-left: 24px;
+  color: #828282;
+}
