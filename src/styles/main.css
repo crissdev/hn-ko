@@ -48,6 +48,7 @@ body {
 .cko-page-content {
   background-color: #F6F6EF;
   padding: 10px;
+  font-family: Verdana, "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
 }
 .cko-more-section {
   margin-top: 20px;
@@ -73,4 +74,18 @@ body {
 .cko-item-details {
   padding-left: 24px;
   color: #828282;
+}
+
+.cko-user-details td {
+  padding: 2px 4px;
+  vertical-align: top;
+  color: #828282;
+}
+.cko-user-details a.cko-submissions-link,
+.cko-user-details a.cko-comments-link {
+  color: #000000;
+  text-decoration: underline;
+}
+.cko-user-details a.cko-submissions-link:visited {
+  color: inherit;
 }

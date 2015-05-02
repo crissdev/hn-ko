@@ -10,13 +10,19 @@ export default class HNAPI {
       connection.child('topstories').limitToFirst(20).once('value', (items) => {
         var promises = items.val().map((item) => {
           return new Promise((resolveItem) => {
-            connection.child(`item/${item}`).on('value', (value) => {
+            connection.child(`item/${item}`).once('value', (value) => {
               resolveItem(value.val());
             });
           });
         });
         Promise.all(promises).then(resolve);
       });
+    });
+  }
+
+  static userInfo(userId) {
+    return new Promise((resolve) => {
+      connection.child(`user/${userId}`).once('value', (value) => { resolve(value.val()); });
     });
   }
 }

@@ -17,6 +17,7 @@
       "knockout.punches": "github:mbest/knockout.punches@^0.5.1",
       "mbest/knockout-switch-case": "github:mbest/knockout-switch-case@^2.1.0",
       "moment": "npm:moment@^2.10.2",
+      "sanitize-html": "npm:sanitize-html@^1.6.1",
       "text": "github:systemjs/plugin-text@^0.0.2",
       "underscore.string": "npm:underscore.string@^3.0.3"
     },

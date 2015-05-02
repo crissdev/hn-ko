@@ -20,6 +20,8 @@ ko.punches.enableAll();
 ko.filters.plural   = (count)  => count > 1 ? 's' : '';
 ko.filters.itemLink = (itemId) => '#/item?id=' + encodeURIComponent(itemId);
 ko.filters.userLink = (userId) => '#/user?id=' + encodeURIComponent(userId);
+ko.filters.threadsLink = (userId) => '#/threads?id=' + encodeURIComponent(userId);
+ko.filters.submissionsLink = (userId) => '#/submitted?id=' + encodeURIComponent(userId);
 ko.filters.timeAgo = (unixTimestamp) => moment.unix(unixTimestamp).fromNow();
 ko.filters.padLeft = (value, count, ch = ' ') => _.pad(value, count, ch, 'left');
 

@@ -1,0 +1,36 @@
+<div class="col-md-10 col-md-offset-1">
+  <!--ko component: {name: 'cko-navbar'}--><!--/ko-->
+
+  <div class="cko-page-content">
+    <!--ko if: busy-->
+    <i class="fa fa-2x fa-spinner fa-spin"></i>
+    <!--/ko-->
+
+    <!--ko ifnot: busy-->
+    <table class="cko-user-details">
+      <tbody>
+      <tr>
+        <td>user:</td>
+        <td>{{$component.userId}}</td>
+      </tr>
+      <tr>
+        <td>created:</td>
+        <td>{{created | timeAgo}}</td>
+      </tr>
+      <tr>
+        <td>karma:</td>
+        <td>{{karma}}</td>
+      </tr>
+      <tr>
+        <td>about:</td>
+        <td>
+          {{{about}}}<br/>
+          <a class="cko-submissions-link" href="{{userId | submissionsLink}}">submissions</a><br/>
+          <a class="cko-comments-link" href="{{userId | threadsLink}}">comments</a>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    <!--/ko-->
+  </div>
+</div>

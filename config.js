@@ -27,6 +27,7 @@ System.config({
     "knockout.punches": "github:mbest/knockout.punches@0.5.1",
     "mbest/knockout-switch-case": "github:mbest/knockout-switch-case@2.1.0",
     "moment": "npm:moment@2.10.2",
+    "sanitize-html": "npm:sanitize-html@1.6.1",
     "text": "github:systemjs/plugin-text@0.0.2",
     "underscore.string": "npm:underscore.string@3.0.3",
     "github:jspm/nodelibs-assert@0.1.0": {
@@ -188,11 +189,28 @@ System.config({
       "randombytes": "npm:randombytes@2.0.1",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
+    "npm:dom-serializer@0.1.0": {
+      "domelementtype": "npm:domelementtype@1.1.3",
+      "entities": "npm:entities@1.1.1"
+    },
+    "npm:domhandler@2.3.0": {
+      "domelementtype": "npm:domelementtype@1.1.3"
+    },
+    "npm:domutils@1.5.1": {
+      "dom-serializer": "npm:dom-serializer@0.1.0",
+      "domelementtype": "npm:domelementtype@1.1.3"
+    },
     "npm:elliptic@1.0.1": {
       "bn.js": "npm:bn.js@1.3.0",
       "brorand": "npm:brorand@1.0.5",
       "hash.js": "npm:hash.js@1.0.2",
       "inherits": "npm:inherits@2.0.1",
+      "systemjs-json": "github:systemjs/plugin-json@0.1.0"
+    },
+    "npm:entities@1.0.0": {
+      "systemjs-json": "github:systemjs/plugin-json@0.1.0"
+    },
+    "npm:entities@1.1.1": {
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
     "npm:events-browserify@0.0.1": {
@@ -226,11 +244,26 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.1",
       "signals": "npm:signals@1.0.0"
     },
+    "npm:htmlparser2@3.8.2": {
+      "domelementtype": "npm:domelementtype@1.1.3",
+      "domhandler": "npm:domhandler@2.3.0",
+      "domutils": "npm:domutils@1.5.1",
+      "entities": "npm:entities@1.0.0",
+      "events": "github:jspm/nodelibs-events@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.1",
+      "readable-stream": "npm:readable-stream@1.1.13",
+      "stream": "github:jspm/nodelibs-stream@0.1.0",
+      "systemjs-json": "github:systemjs/plugin-json@0.1.0",
+      "util": "github:jspm/nodelibs-util@0.1.0"
+    },
     "npm:https-browserify@0.0.0": {
       "http": "github:jspm/nodelibs-http@1.7.1"
     },
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"
+    },
+    "npm:lodash@2.4.2": {
+      "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:miller-rabin@1.1.5": {
       "bn.js": "npm:bn.js@1.3.0",
@@ -300,6 +333,11 @@ System.config({
     "npm:ripemd160@1.0.0": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.1"
+    },
+    "npm:sanitize-html@1.6.1": {
+      "htmlparser2": "npm:htmlparser2@3.8.2",
+      "lodash": "npm:lodash@2.4.2",
+      "regexp-quote": "npm:regexp-quote@0.0.0"
     },
     "npm:sha.js@2.4.0": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
