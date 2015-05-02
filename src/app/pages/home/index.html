@@ -1,0 +1,22 @@
+<div class="col-md-10 col-md-offset-1">
+  <!--ko component: {name: 'cko-navbar'}--><!--/ko-->
+
+  <div class="cko-page-content" style="font-family: Verdana">
+    <!--ko if: $component.busy-->
+    <i class="fa fa-2x fa-spinner fa-spin"></i>
+    <!--/ko-->
+
+    <ul class="list-unstyled" data-bind="foreach: $component.items">
+      <li style="margin-bottom: 0">
+        <!--ko component: { name: 'cko-hn-item', params: { itemType: 'story', data: $data } }-->
+        <!--/ko-->
+      </li>
+    </ul>
+
+    <!--ko ifnot: $component.busy-->
+    <div class="cko-more-section">
+      <a href="javascript:alert('Should load more items');">More</a>
+    </div>
+    <!--/ko-->
+  </div>
+</div>

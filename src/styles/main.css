@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+body {
+  padding-top: 8px;
+}
+
+.cko-navbar {
+  padding: 2px;
+  height: 24px;
+  background-color: #ff6600;
+}
+.cko-navbar a {
+  color: #000000;
+  text-decoration: none;
+  line-height: 13px;
+}
+.cko-navbar a.active {
+  color: #ffffff;
+}
+.cko-navbar a::after {
+  content: '|';
+  padding-left: 5px;
+  color: #000000;
+}
+.cko-navbar a.cko-no-divider::after {
+  padding-left: 0;
+  content: '';
+}
+.cko-navbar .cko-title {
+  color: #000000;
+  margin-right: 10px;
+}
+.cko-navbar .cko-title > strong {
+  cursor: pointer;
+}
+.cko-navbar li {
+  float: left;
+  margin-right: 5px;
+}
+.cko-navbar .cko-nh-logo {
+  display: inline-block;
+  border: 1px solid #ffffff;
+  height: 18px;
+  width: 18px;
+  margin-top: 1px;
+  background: #ff6600 url('https://news.ycombinator.com/y18.gif') no-repeat center center scroll;
+}
+.cko-page-content {
+  background-color: #F6F6EF;
+  padding: 10px;
+}
+.cko-more-section {
+  margin-top: 20px;
+  border-bottom: 2px solid #ff6600;
+  padding-bottom: 5px;
+  margin-left: -10px;
+  margin-right: -10px;
+  padding-left: 34px;
+}

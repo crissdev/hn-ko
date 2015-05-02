@@ -1,0 +1,37 @@
+<div data-bind="switch: $component.itemType">
+
+  <!--ko case: 'story'-->
+  <div>
+    <span style="white-space: pre">{{index | padLeft:2}}.</span>
+    <span>{{title}}</span>
+  </div>
+  <div style="padding-left: 24px; color: #828282">
+    <small>{{score}} point{{score|plural}}</small>
+    <small>by</small>
+    <a href="{{by | userLink}}"><small>{{by}}</small></a>
+
+    <a href="{{id | itemLink}}"><small>{{time | timeAgo}}</small></a>
+
+    <small> | </small>
+
+    <!--ko if: $data.kids.length > 0-->
+    <a href="{{id | itemLink}}">
+      <small>{{kids.length}} comment{{kids.length|plural}}</small>
+    </a>
+    <!--/ko-->
+
+    <!--ko if: $data.kids.length === 0-->
+    <small>discuss</small>
+    <!--/ko-->
+  </div>
+  <!--/ko-->
+
+  <!--ko case: 'comment'-->
+
+  <!--/ko-->
+
+  <!--ko case: 'job'-->
+
+  <!--/ko-->
+
+</div>
