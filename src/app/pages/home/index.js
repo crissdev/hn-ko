@@ -9,12 +9,9 @@ export default class NewestPage {
 
     hnapi.newest()
       .then((items) => {
-        items.forEach((item, index) => {
-          item.index = index + 1;
-          item.kids = item.kids || [];
-        });
-        this.items.push.apply(this.items, items);
-        this.busy(false)
+        this.busy(false);
+        items.forEach((item, index) => item.index = index + 1);
+        this.items.push(...items);
       });
   }
 }

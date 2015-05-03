@@ -4,8 +4,8 @@
   <div class="cko-hn-item-story">
     <div class="cko-headline">
       <span style="white-space: pre">{{index | padLeft:2}}.</span>
-      <!--ko if: url--><a href="{{url}}"><span>{{title}}</span></a><!--/ko-->
-      <!--ko ifnot: url--><span>{{title}}</span><!--/ko-->
+      <!--ko if: $component.url--><a href="{{url}}"><span>{{title}}</span></a><!--/ko-->
+      <!--ko ifnot: $component.url--><span>{{title}}</span><!--/ko-->
     </div>
     <div class="cko-item-details">
       <small>{{score}} point{{score|plural}}</small>
@@ -16,13 +16,13 @@
 
       <small> | </small>
 
-      <!--ko if: $data.kids.length > 0-->
+      <!--ko if: $component.kids && $component.kids.length > 0-->
       <a href="{{id | itemLink}}">
         <small>{{kids.length}} comment{{kids.length|plural}}</small>
       </a>
       <!--/ko-->
 
-      <!--ko if: $data.kids.length === 0-->
+      <!--ko if: !$component.kids || $component.kids.length === 0-->
       <small>discuss</small>
       <!--/ko-->
     </div>
