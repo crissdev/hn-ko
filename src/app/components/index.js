@@ -1,5 +1,4 @@
 import ko from 'knockout';
-import $ from 'jquery';
 
 
 // Register custom KO components (require a different component loader)

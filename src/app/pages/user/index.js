@@ -1,3 +1,4 @@
+import ko from 'knockout';
 import hnapi from '../../services/hnapi';
 import sanitizeHtml from 'sanitize-html';
 

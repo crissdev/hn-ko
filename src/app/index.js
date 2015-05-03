@@ -1,10 +1,10 @@
 import ko from 'knockout';
-import punches from 'knockout.punches';
+import 'knockout.punches';
 import 'knockout-switch-case';
 import _ from 'underscore.string';
 import moment from 'moment';
 import routes from './routes';
-import * as router from './shared/router';
+import {registerRoutes} from './shared/router';
 
 
 // Knockout component loader required for custom components (using SystemJS)
@@ -25,8 +25,9 @@ ko.filters.submissionsLink = (userId) => '#/submitted?id=' + encodeURIComponent(
 ko.filters.timeAgo = (unixTimestamp) => moment.unix(unixTimestamp).fromNow();
 ko.filters.padLeft = (value, count, ch = ' ') => _.pad(value, count, ch, 'left');
 
+
 // Register routes
-router.registerRoutes(routes);
+registerRoutes(routes);
 
 
 // Register components
