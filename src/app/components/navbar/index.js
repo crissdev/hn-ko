@@ -2,7 +2,10 @@ import hasher from 'hasher';
 
 
 export default class Navbar {
-  constructor() {
+  constructor(params) {
+    if (params) {
+      this.activePageTitle = params.activePageTitle;
+    }
   }
 
   navHome() {

@@ -4,5 +4,10 @@
     <li class="cko-title">
       <strong data-bind="on.click: $component.navHome()">Hacker News written in KnockoutJS</strong>
     </li>
+    <!--ko if: $component.activePageTitle-->
+    <li>
+      <a class="active" href="javascript:;">{{activePageTitle}}</a>
+    </li>
+    <!--/ko-->
   </ul>
 </nav>

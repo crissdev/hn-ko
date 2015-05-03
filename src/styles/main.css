@@ -16,10 +16,11 @@ body {
 }
 .cko-navbar a.active {
   color: #ffffff;
+  cursor: default;
 }
-.cko-navbar a::after {
+.cko-navbar a::before {
   content: '|';
-  padding-left: 5px;
+  padding-right: 10px;
   color: #000000;
 }
 .cko-navbar a.cko-no-divider::after {
