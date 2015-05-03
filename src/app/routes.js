@@ -17,7 +17,16 @@ export default {
       userId: /[a-z0-9_-]+/
     },
     meta: {
-      docTitle: (route) => `${route.params.userId} submissions`
+      docTitle: (route) => `${route.params.userId}'s submissions`
+    }
+  },
+  '/threads/?id={userId}/': {
+    component: 'app/pages/threads',
+    rules: {
+      userId: /[a-z0-9_-]+/
+    },
+    meta: {
+      docTitle: (route) => `${route.params.userId}'s comments`
     }
   }
 }

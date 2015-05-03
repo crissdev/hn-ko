@@ -30,7 +30,20 @@
   <!--/ko-->
 
   <!--ko case: 'comment'-->
+  <div class="cko-hn-item-comment">
+    <div class="cko-item-details">
+      <i class="fa fa-caret-up"></i>
+      <a href="{{by | userLink}}"><small>{{by}}</small></a>
+      <a href="{{id | itemLink}}"><small>{{time | timeAgo}}</small></a>
+      <small> | </small>
 
+      <a href="{{parent | itemLink}}"><small>parent</small></a>
+      <small> on: </small>
+      <a href="{{storyId | itemLink}}"><small>{{storyTitle}}</small></a>
+
+      <p class="cko-comment-text">{{{ text }}}</p>
+    </div>
+  </div>
   <!--/ko-->
 
   <!--ko case: 'job'-->

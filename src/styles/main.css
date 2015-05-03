@@ -76,6 +76,14 @@ body {
   padding-left: 24px;
   color: #828282;
 }
+.cko-hn-item-comment .cko-item-details {
+  padding-left: 10px;
+}
+.cko-hn-item-comment .cko-item-details .cko-comment-text {
+  padding-left: 14px;
+  font-size: smaller;
+  color: #000000
+}
 
 .cko-user-details td {
   padding: 2px 4px;
@@ -87,6 +95,8 @@ body {
   color: #000000;
   text-decoration: underline;
 }
-.cko-user-details a.cko-submissions-link:visited {
+.cko-user-details a.cko-submissions-link:visited,
+.cko-user-details a.cko-comments-link:visited
+{
   color: inherit;
 }
