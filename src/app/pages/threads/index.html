@@ -10,6 +10,10 @@
     <i class="fa fa-2x fa-spinner fa-spin"></i>
     <!--/ko-->
 
+    <!--ko if: !$component.busy() && $component.items().length === 0-->
+    <small>No comments yet.</small>
+    <!--/ko-->
+
     <ul class="list-unstyled" data-bind="foreach: $component.items">
       <li style="margin-bottom: 0">
         <!--ko component: { name: 'cko-hn-item', params: { itemType: 'thread', data: $data } }-->

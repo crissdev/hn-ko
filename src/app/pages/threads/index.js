@@ -13,7 +13,6 @@ export default class ThreadsPage {
       this.subtitle(`${routeParams.userId}'s comments`);
       hnapi.userComments(routeParams.userId)
         .then((items) => {
-          this.busy(false);
           items.forEach((item) => {
             item.text = sanitizeHtml(item.text, {
               allowedTags: ['p', 'b', 'i', 'strong', 'em', 'a'],
@@ -23,6 +22,7 @@ export default class ThreadsPage {
             });
           });
           this.items.push(...items);
+          this.busy(false);
         });
     }
     else {
@@ -33,12 +33,12 @@ export default class ThreadsPage {
         })
         .then(() => hnapi.submissions([routeParams.threadId]))
         .then((comments) => {
-          this.items.push(...comments.filter((item) => !item.deleted));
+          this.items.push(...comments.filter((item) => !item.deleted && item.text));
 
           // Load just some more comments if available
           var kids = comments.reduce((previous, item) => previous.concat(item.kids || []), []);
           if (kids.length > 0) {
-            hnapi._details(kids)
+            return hnapi._details(kids)
               .then((comments) => {
                 this.items.push(...comments.filter((item) => !item.deleted));
               })

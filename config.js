@@ -15,8 +15,8 @@ System.config({
 
 System.config({
   "map": {
-    "babel": "npm:babel-core@5.2.6",
-    "babel-runtime": "npm:babel-runtime@5.2.6",
+    "babel": "npm:babel-core@5.2.9",
+    "babel-runtime": "npm:babel-runtime@5.2.9",
     "core-js": "npm:core-js@0.9.6",
     "crossroads": "npm:crossroads@0.12.0",
     "firebase": "npm:firebase@2.2.4",
