@@ -28,5 +28,8 @@ export default {
     meta: {
       docTitle: (route) => `${route.params.userId}'s comments`
     }
+  },
+  '/item/?id={threadId}': {
+    component: 'app/pages/threads'
   }
 }
