@@ -379,9 +379,6 @@ System.config({
     "npm:constants-browserify@0.0.1": {
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
-    "npm:core-js@0.9.6": {
-      "process": "github:jspm/nodelibs-process@0.1.1"
-    },
     "npm:core-js@0.9.7": {
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
