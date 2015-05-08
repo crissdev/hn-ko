@@ -59,6 +59,11 @@ body {
   margin-right: -10px;
   padding-left: 34px;
 }
+.cko-headline {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 [class^="cko-hn-item-"] > .cko-headline a,
 [class^="cko-hn-item-"] > .cko-headline a:hover,
 [class^="cko-hn-item-"] > .cko-headline a:focus,
