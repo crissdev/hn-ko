@@ -5,9 +5,14 @@
       <strong data-bind="on.click: $component.navHome()">Hacker News written in KnockoutJS</strong>
     </li>
     <!--ko if: $component.activePageTitle-->
-    <li>
+    <li class="hidden-xs">
       <a class="active" href="javascript:;">{{activePageTitle}}</a>
     </li>
     <!--/ko-->
   </ul>
 </nav>
+<!--ko if: $component.activePageTitle-->
+<div class="visible-xs text-center">
+  <strong style="text-transform: uppercase">{{activePageTitle}}</strong>
+</div>
+<!--/ko-->
