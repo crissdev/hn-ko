@@ -25,8 +25,7 @@ export default class ViewSwitch {
       var componentName = 'c' + (+new Date());
 
       if (!routeInfo.$component) {
-        routeInfo.$component = ko.utils.extend({}, routeInfo.component);
-        routeInfo.$component.name = componentName;
+        routeInfo.$component = { name: componentName };
 
         if (typeof routeInfo.component === 'string') {
           ko.components.register(componentName, { component: routeInfo.component });
